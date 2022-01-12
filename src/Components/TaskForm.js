@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function TaskForm({ task, setTask, handleSubmit }) {
+export default function TaskForm({ setTask, handleSubmit }) {
   return (
     <div>
       <form>

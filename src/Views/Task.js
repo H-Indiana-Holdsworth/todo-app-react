@@ -9,7 +9,7 @@ export default function Task({ setCurrentUser }) {
   const [task, setTask] = useState({});
   const [taskList, setTaskList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [completeTask, setCompleteTask] = useState(false);
+  // const [completeTask, setCompleteTask] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
