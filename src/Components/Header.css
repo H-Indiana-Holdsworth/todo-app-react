@@ -1,0 +1,9 @@
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+h3:hover {
+  text-decoration: underline 2px black;
+  width: fit-content;
+}

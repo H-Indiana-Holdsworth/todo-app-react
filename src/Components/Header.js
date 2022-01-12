@@ -1,9 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
+import './Header.css';
 
 export default function Header({ type, setType }) {
   return (
-    <div>
+    <div className="types">
       <p>Type: {type}</p>
       <h3
         onClick={() => {
