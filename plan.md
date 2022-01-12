@@ -4,10 +4,10 @@
 
 ### Auth.js and AuthForm.js
 
-- [ ] Users can sign up for an account
-- [ ] Users can sign in to an existing account
+- [x] Users can sign up for an account
+- [x] Users can sign in to an existing account
 - [ ] Users can logout of an account
-- [ ] Unauthenticated users see the option to sign in or sign up
+- [x] Unauthenticated users see the option to sign in or sign up
 
 ### Task.js and TaskForm.js
 
@@ -40,7 +40,7 @@
 
 ### Header.js
 
-- returns h3's that update type state onClick
+- [x]returns h3's that update type state onClick
 
 ### AuthForm.js
 
