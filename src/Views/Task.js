@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import TaskForm from '../Components/TaskForm';
 import TaskList from '../Components/TaskList';
-import { createTask, getTasks, toggleComplete } from '../services/task';
+import { createTask, deleteTask, getTasks, toggleComplete } from '../services/task';
 import { logout } from '../services/users';
 
 export default function Task({ setCurrentUser }) {
@@ -34,6 +34,10 @@ export default function Task({ setCurrentUser }) {
     setTaskList((prev) => [...prev, resp[0]]);
   };
 
+  const handleDelete = async (id) => {
+    await deleteTask(id);
+  };
+
   const handleClick = async (task) => {
     await toggleComplete(task.id, !task.is_complete);
 
@@ -48,7 +52,12 @@ export default function Task({ setCurrentUser }) {
 
   return (
     <div>
-      <TaskList taskList={taskList} setTaskList={setTaskList} handleClick={handleClick} />
+      <TaskList
+        taskList={taskList}
+        setTaskList={setTaskList}
+        handleClick={handleClick}
+        handleDelete={handleDelete}
+      />
       <TaskForm handleSubmit={handleSubmit} task={task} setTask={setTask} />
       <button onClick={logoutUser}>Log Out</button>
     </div>

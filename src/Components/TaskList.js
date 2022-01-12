@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function TaskList({ taskList, handleClick }) {
+export default function TaskList({ taskList, handleClick, handleDelete }) {
   return (
     <div>
       {taskList.map((item) => (
@@ -15,6 +15,7 @@ export default function TaskList({ taskList, handleClick }) {
             />
             {item.task}
           </li>
+          <button onClick={() => handleDelete(item.id)}>Delete Task</button>
         </ul>
       ))}
     </div>
