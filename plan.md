@@ -6,7 +6,7 @@
 
 - [x] Users can sign up for an account
 - [x] Users can sign in to an existing account
-- [ ] Users can logout of an account
+- [x] Users can logout of an account
 - [x] Unauthenticated users see the option to sign in or sign up
 
 ### Task.js and TaskForm.js
@@ -33,7 +33,7 @@
 
 ### Task.js
 
-- [ ] defines a logoutUser fxn that awaits logout and then setCurrentUser(null)
+- [x] defines a logoutUser fxn that awaits logout and then setCurrentUser(null)
 
 ## Components
 
@@ -51,9 +51,8 @@
 - [x] displays a form with inputs to enter a task
 - [x] has a handle submit that calls createTask on submit
   - [x] call createTask fxn
-- [ ] gives state to isCompleted with an initial value of false
 
 ### TaskList.js
 
-- Displays a list of Tasks
-  - returns a list of tasks with a getTask fxn
+- [x] Displays a list of Tasks
+  - [x] returns a list of tasks with a getTask fxn

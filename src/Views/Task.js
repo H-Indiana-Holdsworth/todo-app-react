@@ -6,7 +6,7 @@ import { createTask, getTasks, toggleComplete } from '../services/task';
 import { logout } from '../services/users';
 
 export default function Task({ setCurrentUser }) {
-  const [task, setTask] = useState({});
+  const [task, setTask] = useState('');
   const [taskList, setTaskList] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -27,17 +27,11 @@ export default function Task({ setCurrentUser }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const resp = await createTask(task);
+    const resp = await createTask(task);
 
-      setTask('');
+    setTask('');
 
-      setTaskList((prev) => [...prev, resp[0]]);
-
-      alert('Task succesfully added!');
-    } catch (e) {
-      alert('Error, task not created.');
-    }
+    setTaskList((prev) => [...prev, resp[0]]);
   };
 
   const handleClick = async (task) => {
