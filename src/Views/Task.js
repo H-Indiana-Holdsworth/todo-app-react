@@ -13,12 +13,12 @@ export default function Task({ setCurrentUser }) {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = getTasks();
-      setTask(data);
+      const data = await getTasks();
+      setTaskList(data);
       setLoading(false);
     };
     fetchData();
-  }, [loading]);
+  }, []);
 
   if (loading) {
     return <h2>Loading...</h2>;
@@ -43,7 +43,7 @@ export default function Task({ setCurrentUser }) {
   return (
     <div>
       <TaskForm handleSubmit={handleSubmit} task={task} setTask={setTask} />
-      <TaskList />
+      <TaskList taskList={taskList} setTaskList={setTaskList} />
       <button onClick={logoutUser}>Log Out</button>
     </div>
   );

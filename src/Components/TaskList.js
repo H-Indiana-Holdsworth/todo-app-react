@@ -1,9 +1,13 @@
 import React from 'react';
 
-export default function TaskList() {
+export default function TaskList({ taskList }) {
   return (
     <div>
-      <h1>Task List</h1>
+      {taskList.map((item) => (
+        <ul key={item.id}>
+          <li>{item.task}</li>
+        </ul>
+      ))}
     </div>
   );
 }

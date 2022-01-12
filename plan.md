@@ -49,9 +49,9 @@
 
 ### TaskForm.js
 
-- [ ] displays a form with inputs to enter a task
-- [ ] has a handle submit that calls createTask on submit
-  - [ ] call createTask fxn
+- [x] displays a form with inputs to enter a task
+- [x] has a handle submit that calls createTask on submit
+  - [x] call createTask fxn
 - [ ] gives state to isCompleted with an initial value of false
 
 ### TaskList.js
