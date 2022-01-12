@@ -1,4 +1,4 @@
-# Epic ToDo Plan
+# Epic Task Plan
 
 ## Acceptance Criteria
 
