@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import TaskForm from '../Components/TaskForm';
 import TaskList from '../Components/TaskList';
-import { getTasks } from '../services/task';
+import { createTask, getTasks } from '../services/task';
 import { logout } from '../services/users';
 
 export default function Task({ setCurrentUser }) {
@@ -24,6 +24,17 @@ export default function Task({ setCurrentUser }) {
     return <h2>Loading...</h2>;
   }
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await createTask(task);
+      alert('Task succesfully added!');
+    } catch (e) {
+      alert('Error, task not created.');
+    }
+  };
+
   const logoutUser = async () => {
     await logout();
     setCurrentUser(null);
@@ -31,8 +42,9 @@ export default function Task({ setCurrentUser }) {
 
   return (
     <div>
-      <TaskForm />
+      <TaskForm handleSubmit={handleSubmit} task={task} setTask={setTask} />
       <TaskList />
+      <button onClick={logoutUser}>Log Out</button>
     </div>
   );
 }

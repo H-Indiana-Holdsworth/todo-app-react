@@ -5,7 +5,7 @@ export async function getTasks() {
   return checkError(resp);
 }
 
-export async function createToDo(task) {
+export async function createTask(task) {
   const resp = await client.from('todos').insert([{ task: task, user_id: client.auth.user().id }]);
   return checkError(resp);
 }
