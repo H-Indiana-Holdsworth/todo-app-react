@@ -11,9 +11,9 @@
 
 ### Task.js and TaskForm.js
 
-- [ ] Authenticated users can see a list of to do items
-- [ ] Authenticated users can add new to do items
-- [ ] Authenticated users can complete to do items
+- [x] Authenticated users can see a list of to do items
+- [x] Authenticated users can add new to do items
+- [x] Authenticated users can complete to do items
 - [ ] Authenticated users can delete to do items (stretch)
 
 ## Views
@@ -33,7 +33,6 @@
 
 ### Task.js
 
-- [ ] Give state for task and setTask with useState(false)
 - [ ] defines a logoutUser fxn that awaits logout and then setCurrentUser(null)
 
 ## Components
