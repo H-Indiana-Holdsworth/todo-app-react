@@ -20,9 +20,8 @@
 
 ### App.js
 
-- give state for currentUser with a default value that calls getUser()
-- defines a logoutUser fxn that awaits logout and then setCurrentUser(null)
-- has a Route that conditionally renders Task.js based if currentUser and ˝˝!currentUser renders Auth.js with setCurrentUser as a prop
+- [x] give state for currentUser with a default value that calls getUser()
+- [x] has a Route that conditionally renders Task.js based if currentUser and ˝˝!currentUser renders Auth.js with setCurrentUser as a prop
 
 ### Auth.js
 
@@ -39,6 +38,7 @@
 ### Task.js
 
 - [ ] Give state for task and setTask with useState(false)
+- [ ] defines a logoutUser fxn that awaits logout and then setCurrentUser(null)
 
 ## Components
 
