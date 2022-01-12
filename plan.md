@@ -29,11 +29,7 @@
 - [x] Write a handleSubmit with a try catch statement that updates type (SignIn or SignUp)
   - [x] setCurrentUser with that resp
   - [x] In the catch, setErrorMessage()
-- [ ] return (<AuthForm /> with props)
-
-### Header.js
-
-- returns h3's that update type state onClick
+- [x] return (<AuthForm /> with props)
 
 ### Task.js
 
@@ -42,10 +38,14 @@
 
 ## Components
 
+### Header.js
+
+- returns h3's that update type state onClick
+
 ### AuthForm.js
 
-- [ ] returns a form with inputs that update state for email and password onChange and a button to handleSubmit onCick
-- [ ] displays an error message if needed
+- [x] returns a form with inputs that update state for email and password onChange and a button to handleSubmit onCick
+- [x] displays an error message if needed
 
 ### TaskForm.js
 

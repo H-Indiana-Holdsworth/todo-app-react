@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import AuthForm from '../Components/AuthForm';
+import Header from '../Components/Header';
 import { signInUser, signUpUser } from '../services/users';
 
 export default function Auth() {
@@ -23,6 +24,7 @@ export default function Auth() {
 
   return (
     <div>
+      <Header type={type} setType={setType} />
       <AuthForm
         email={email}
         setEmail={setEmail}
