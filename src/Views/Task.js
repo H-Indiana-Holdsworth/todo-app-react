@@ -1,5 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import TaskForm from '../Components/TaskForm';
+import TaskList from '../Components/TaskList';
+import { getTasks } from '../services/task';
 import { logout } from '../services/users';
 
 export default function Task({ setCurrentUser }) {
@@ -9,11 +12,17 @@ export default function Task({ setCurrentUser }) {
   const [completeTask, setCompleteTask] = useState(false);
 
   useEffect(() => {
-    const getTasks
-    return () => {
-      cleanup
-    }
-  }, [input])
+    const fetchData = async () => {
+      const data = getTasks();
+      setTask(data);
+      setLoading(false);
+    };
+    fetchData();
+  }, [loading]);
+
+  if (loading) {
+    return <h2>Loading...</h2>;
+  }
 
   const logoutUser = async () => {
     await logout();
@@ -22,7 +31,8 @@ export default function Task({ setCurrentUser }) {
 
   return (
     <div>
-      <h1>Task page</h1>
+      <TaskForm />
+      <TaskList />
     </div>
   );
 }
