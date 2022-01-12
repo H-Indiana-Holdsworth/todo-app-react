@@ -1,0 +1,58 @@
+# Epic Task Plan
+
+## Acceptance Criteria
+
+### Auth.js and AuthForm.js
+
+- [x] Users can sign up for an account
+- [x] Users can sign in to an existing account
+- [x] Users can logout of an account
+- [x] Unauthenticated users see the option to sign in or sign up
+
+### Task.js and TaskForm.js
+
+- [x] Authenticated users can see a list of to do items
+- [x] Authenticated users can add new to do items
+- [x] Authenticated users can complete to do items
+- [ ] Authenticated users can delete to do items (stretch)
+
+## Views
+
+### App.js
+
+- [x] give state for currentUser with a default value that calls getUser()
+- [x] has a Route that conditionally renders Task.js based if currentUser and ˝˝!currentUser renders Auth.js with setCurrentUser as a prop
+
+### Auth.js
+
+- [x] Give state for email, password, errorMessage, type
+- [x] Write a handleSubmit with a try catch statement that updates type (SignIn or SignUp)
+  - [x] setCurrentUser with that resp
+  - [x] In the catch, setErrorMessage()
+- [x] return (<AuthForm /> with props)
+
+### Task.js
+
+- [x] defines a logoutUser fxn that awaits logout and then setCurrentUser(null)
+
+## Components
+
+### Header.js
+
+- [x]returns h3's that update type state onClick
+
+### AuthForm.js
+
+- [x] returns a form with inputs that update state for email and password onChange and a button to handleSubmit onCick
+- [x] displays an error message if needed
+
+### TaskForm.js
+
+- [x] displays a form with inputs to enter a task
+- [x] has a handle submit that calls createTask on submit
+  - [x] call createTask fxn
+
+### TaskList.js
+
+- [x] Displays a list of Tasks
+  - [x] returns a list of tasks with a getTask fxn
