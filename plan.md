@@ -26,9 +26,9 @@
 ### Auth.js
 
 - [x] Give state for email, password, errorMessage, type
-- [ ] Write a handleSubmit with a try catch statement that updates type (SignIn or SignUp)
-  - [ ] setCurrentUser with that resp
-  - [ ] In the catch, setErrorMessage()
+- [x] Write a handleSubmit with a try catch statement that updates type (SignIn or SignUp)
+  - [x] setCurrentUser with that resp
+  - [x] In the catch, setErrorMessage()
 - [ ] return (<AuthForm /> with props)
 
 ### Header.js
